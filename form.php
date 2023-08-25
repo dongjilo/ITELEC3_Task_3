@@ -22,9 +22,9 @@
 <body>
 <div class="container container-cstm mt-5">
     <h2 class="h2">LOGIN PAGE</h2>
-    <form action="data.php" method="post">
+    <form action="./operation/data.php" method="post">
 
-        <div class="form-floating mb-3">
+            <div class="form-floating mb-3">
             <input type="text" name="nameText" class="form-control" id="floatingInput" placeholder="Name Example">
             <label for="floatingInput">Name</label>
         </div>

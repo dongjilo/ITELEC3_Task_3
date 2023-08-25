@@ -1,3 +1,22 @@
+<?php
+
+if (isset($_POST['nameText']) && isset($_POST['emailText']) && isset($_POST['pwText'])){
+    $nameText = $_POST['nameText'];
+    $emailText = $_POST['emailText'];
+    $pwText = $_POST['pwText'];
+
+    echo '<div class="container container-cstm mt-5">';
+    echo '<div class="container">';
+    echo '<h1 class="h1">Hello, ' . $nameText . '</h1>';
+    echo '<p class="px-1" name="p1">' . $emailText . '</p>';
+    echo '<p class="px-1">Password: ' . $pwText . '</p>';
+    echo '</div>';
+    echo '</div>';
+    
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,9 +40,9 @@
 </head>
 <body>
     <div class="container container-cstm mt-5">
-        <h3 class="h3 p-3 bg-primary text-white text-center">REGISTER FORM</h3>
+        <h3 class="h3 p-3 bg-primary text-white text-center">Login Page using SELF</h3>
         <div class="container-cstm bg-white">
-            <form action="form.php" method="post" autocomplete="">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="">
 
                 <div class="form-floating mb-3">
                     <input type="text" name="nameText" class="form-control" id="floatingInput" placeholder="Name Example">
@@ -46,5 +65,7 @@
             </form>
         </div>
     </div>
+
+
 </body>
 </html>
