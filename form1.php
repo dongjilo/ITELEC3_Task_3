@@ -1,21 +1,4 @@
-<?php
 
-if (isset($_POST['nameText']) && isset($_POST['emailText']) && isset($_POST['pwText'])){
-    $nameText = $_POST['nameText'];
-    $emailText = $_POST['emailText'];
-    $pwText = $_POST['pwText'];
-
-    echo '<div class="container container-cstm mt-5">';
-    echo '<div class="container">';
-    echo '<h1 class="h1">Hello, ' . $nameText . '</h1>';
-    echo '<p class="px-1" name="p1">' . $emailText . '</p>';
-    echo '<p class="px-1">Password: ' . $pwText . '</p>';
-    echo '</div>';
-    echo '</div>';
-    
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,6 +17,22 @@ if (isset($_POST['nameText']) && isset($_POST['emailText']) && isset($_POST['pwT
 
         .bg-primary {
             border-radius: 10px;
+
+        }
+
+        .anim {
+            animation: fadeIn 500ms ease-out backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                transform: translateY (250px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0px);
+                opacity: 1;
+            }
         }
     </style>
     <title>Form Page</title>
@@ -66,6 +65,24 @@ if (isset($_POST['nameText']) && isset($_POST['emailText']) && isset($_POST['pwT
         </div>
     </div>
 
+<?php
+
+if (isset($_POST['nameText']) && isset($_POST['emailText']) && isset($_POST['pwText'])){
+    $nameText = $_POST['nameText'];
+    $emailText = $_POST['emailText'];
+    $pwText = $_POST['pwText'];
+
+    echo '<div class="container container-cstm mt-5 anim">';
+    echo '<div class="container">';
+    echo '<h1 class="h1">Hello, ' . $nameText . '</h1>';
+    echo '<p class="px-1" name="p1">' . $emailText . '</p>';
+    echo '<p class="px-1">Password: ' . $pwText . '</p>';
+    echo '</div>';
+    echo '</div>';
+    
+}
+
+?>
 
 </body>
 </html>

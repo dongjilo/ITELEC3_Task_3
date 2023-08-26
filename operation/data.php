@@ -20,7 +20,8 @@ $pwText = $_POST['pwText'];
         .container-cstm {
             max-width: 400px;
             border-radius: 10px;
-            padding: 20px;
+            padding: 50px;
+            margin-top: 18% !important;
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
         }
     </style>
@@ -29,7 +30,7 @@ $pwText = $_POST['pwText'];
 <body>
     <div class="container container-cstm mt-5">
         <div class="container">
-            <h1 class="h1">Hello, <?php echo $nameText?></h1>
+            <h1 class="h1">Hello, <?php echo $nameText?>.`</h1>
             <p class="px-1" name="p1"><?php echo $emailText?></p>
             <p class="px-1">Password: <?php echo $pwText?></p>
         </div>
