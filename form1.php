@@ -26,11 +26,11 @@
 
         @keyframes fadeIn {
             from {
-                transform: translateY (250px);
+                transform: translateY(250px);
                 opacity: 0;
             }
             to {
-                transform: translateX(0px);
+                transform: translateY(0px);
                 opacity: 1;
             }
         }
@@ -41,7 +41,7 @@
     <div class="container container-cstm mt-5">
         <h3 class="h3 p-3 bg-primary text-white text-center">Login Page using SELF</h3>
         <div class="container-cstm bg-white">
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="off">
 
                 <div class="form-floating mb-3">
                     <input type="text" name="nameText" class="form-control" id="floatingInput" placeholder="Name Example">
