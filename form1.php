@@ -67,7 +67,7 @@
 
 <?php
 
-if (isset($_POST['nameText']) && isset($_POST['emailText']) && isset($_POST['pwText'])){
+if (!empty($_POST['nameText']) && !empty($_POST['emailText']) && !empty($_POST['pwText'])){
     $nameText = $_POST['nameText'];
     $emailText = $_POST['emailText'];
     $pwText = $_POST['pwText'];

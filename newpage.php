@@ -13,10 +13,11 @@
             margin-top: 30%;
             padding: 20px;
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
-        }
+        }   
     </style>
 </head>
 <body>
+
 <?php 
 
 echo '<div class="container container-cstm mt-5">';

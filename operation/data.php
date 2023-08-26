@@ -4,10 +4,6 @@ $nameText = $_POST['nameText'];
 $emailText = $_POST['emailText'];
 $pwText = $_POST['pwText'];
 
-// echo "Hello, {$nameText} <br>";
-// echo "{$emailText}";
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,14 +17,30 @@ $pwText = $_POST['pwText'];
             max-width: 400px;
             border-radius: 10px;
             padding: 50px;
-            margin-top: 18% !important;
+            margin-top: 15% !important;
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
         }
+
+        .anim {
+            animation: fadeIn 500ms ease-out backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                transform: translateZ(250px);
+                opacity: 0;
+            }
+            to {
+                transform: translateZ(0px);
+                opacity: 1;
+            }
+        }
+
     </style>
     <title>Welcome</title>
 </head>
 <body>
-    <div class="container container-cstm mt-5">
+    <div class="container container-cstm mt-5 anim">
         <div class="container">
             <h1 class="h1">Hello, <?php echo $nameText?>.`</h1>
             <p class="px-1" name="p1"><?php echo $emailText?></p>
