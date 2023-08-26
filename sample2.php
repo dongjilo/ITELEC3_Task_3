@@ -15,7 +15,7 @@
 <body>
     <div class="container container-cstm text-center">
         <a href="newpage.php?name=Angelo Mariano&email=angelo@email.com">
-            <button class="btn btn-success" type="button">GO TO NEW PAGE</button>
+            <button class="btn btn-success" type="button">GO TO A NEW PAGE</button>
         </a>
     </div>
 </body>

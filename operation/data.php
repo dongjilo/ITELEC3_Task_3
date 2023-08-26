@@ -1,10 +1,4 @@
-<?php 
 
-$nameText = $_POST['nameText'];
-$emailText = $_POST['emailText'];
-$pwText = $_POST['pwText'];
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +8,7 @@ $pwText = $_POST['pwText'];
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <style>
         .container-cstm {
-            max-width: 400px;
+            max-width: 450px;
             border-radius: 10px;
             padding: 50px;
             margin-top: 15% !important;
@@ -40,12 +34,28 @@ $pwText = $_POST['pwText'];
     <title>Welcome</title>
 </head>
 <body>
-    <div class="container container-cstm mt-5 anim">
-        <div class="container">
-            <h1 class="h1">Hello, <?php echo $nameText?>.`</h1>
-            <p class="px-1" name="p1"><?php echo $emailText?></p>
-            <p class="px-1">Password: <?php echo $pwText?></p>
-        </div>
-    </div>
+<?php 
+
+if (!empty($_POST['nameText']) && !empty($_POST['emailText']) && !empty($_POST['pwText'])){
+    $nameText = $_POST['nameText'];
+    $emailText = $_POST['emailText'];
+    $pwText = $_POST['pwText'];
+
+    echo '<div class="container container-cstm mt-5 anim">';
+    echo '<div class="container">';
+    echo '<h1 class="h1">Hello, ' . $nameText . '.</h1>';
+    echo '<p class="px-1" name="p1">' . $emailText . '</p>';
+    echo '<p class="px-1">Password: ' . $pwText . '</p>';
+    echo '</div>';
+    echo '</div>';
+    
+}else {
+    echo '<div class="container container-cstm mt-5 anim">';
+    echo '<div class="container">';
+    echo '<h1 class="h1">This can only be accessed after logging in. <a href="../form.php">Log in</a></h1>';
+    echo '</div>';
+    echo '</div>';
+}
+?>
 </body>
 </html>

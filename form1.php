@@ -35,7 +35,7 @@
             }
         }
     </style>
-    <title>Form Page</title>
+    <title>Form Page Using Self</title>
 </head>
 <body>
     <div class="container container-cstm mt-5">
