@@ -9,6 +9,7 @@
         .container-cstm {
             max-width: 400px;
             border-radius: 10px;
+            margin-top: 12% !important;
             padding: 20px;
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
         }
@@ -24,7 +25,7 @@
     <h3 class="h3 p-3 bg-info text-white text-center">Login Page</h3>
     <form action="./operation/data.php" method="post">
 
-            <div class="form-floating mb-3">
+        <div class="form-floating mb-3">
             <input type="text" name="nameText" class="form-control" id="floatingInput" placeholder="Name Example">
             <label for="floatingInput">Name</label>
         </div>
@@ -43,7 +44,7 @@
             <input class="btn btn-success m-2" name="btnSubmit" type="submit" value="REGISTER" >
             <input class="btn btn-danger m-2" name="btnCancel" type="reset"  value="CANCEL">
         </div>
-        </form>
+    </form>
 </div>
 </body>
 </html>
